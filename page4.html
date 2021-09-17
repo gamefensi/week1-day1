@@ -33,12 +33,12 @@
         <p>My Fourth paragraph</p>
 
             <ul id="album">
-                <li id="photo"><img src="images/winterland1.jpg"></li>
+                <!-- <li id="photo"><img src="images/winterland1.jpg"></li>
                 <li id="photo"><img src="images/winterland2.jpg"></li>
                 <li id="photo"><img src="images/winterland3.jpg"></li>
                 <li id="photo"><img src="images/winterland4.jpg"></li>
                 <li id="photo"><img src="images/winterland5.jpg"></li>
-                <li id="photo"><img src="images/winterland6.jpg"></li>
+                <li id="photo"><img src="images/winterland6.jpg"></li> -->
             </ul>
     </main>
     <!-- Footer Information -->
@@ -49,6 +49,25 @@
 </div>
 <!-- End Container -->
 
+<script>
+    var numOfPhotos = 6;
+    var photos = []; //Declare an empty array to store image element
+    var fileNames = []; //Declare an empty array to store image filenames
+    var imageList = []; //Declare an empty array to store html list that contains an image
+    var image; //Declare an empty variable to store assembled image list codes
+    var openList = "<li id='photo'>"; //Declare a variable to contain an open list tag
+    var closeList = "</li>"; //Declare a variable to contain a close list tag
 
+    //Create a loop to create 6 images starting with index of 0
+    for(var i=0; i<numOfPhotos; i++) {
+        fileNames.push("winterland"+(i+1)); //create image file name & store in array
+        photos.push("<img src='images/"+fileNames[i]+".jpg'>"); //Assemble file name into an image element and store in an array
+        image = openList + photos[i] + closeList; //Assemble everything
+        imageList.push(image); //Store the fully assembled code of each image list
+    }
+
+    //Display all six image codes stored in the array
+    document.getElementById("album").innerHTML = imageList;
+</script>
 </body>
 </html>
