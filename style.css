@@ -9,7 +9,7 @@ header {
     padding-left: 100px;*/
     padding: 100px 0 0 100px; /* clockwise starting from 12 o'clock position */
     font-weight: bold;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 li {
     list-style-type:none;
@@ -105,4 +105,9 @@ fieldset {
 legend {
     font-size:larger;
     font-weight: bold;
+}
+
+/* Page 4 */
+main #album #photo img {
+    width: 400px;
 }
